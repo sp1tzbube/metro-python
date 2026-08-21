@@ -12,5 +12,5 @@ Tein tehtävät 1-6.
 
 ## Moduuli 4
 
-Tein tehtävät 1-2.
+Tein tehtävät 1-4.
 ...
