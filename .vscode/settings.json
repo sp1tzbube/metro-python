@@ -1,0 +1,9 @@
+{
+    "editor.tabCompletion": "on",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    "python.analysis.autoImportCompletions": true
+}
