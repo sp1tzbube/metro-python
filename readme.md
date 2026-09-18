@@ -30,4 +30,8 @@ Tein tehtävät 1-6 .
 
 Tein tehtävät 1-3 .
 
+## Moduuli 8
+
+Tein tehtävät 1-4 .
+
 ...

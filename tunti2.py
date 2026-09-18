@@ -4,3 +4,4 @@ year = int(input('Anna ikäsi: '))
 
 
 juomat = 'kahvia'
+na
