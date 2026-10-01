@@ -1,9 +1,36 @@
 import random
 
-reppu_lista = []
+class Esine():
+    def __init__(self, nimi, paino):
+        self.nimi = nimi
+        self.paino = paino
+    
+    def __str__(self):
+        return f"{self.nimi} ({self.paino}kg)"
+
+class Huone():
+    def __init__(self, nimi, esineet=None):
+        self.nimi = nimi
+        self.esineet = esineet if esineet else []
+
+class Pelaaja():
+    def __init__(self, nimi, age, sijainti ):
+        self.nimi = nimi
+        self.age = age
+        self.esineet = []
+        self.sijainti = sijainti
+
+    def liiku(self,huone):
+        self.sijainti = huone 
+        print(f"--> Siirryit paikkaan {huone.nimi}")
+    
+    def keraa_esine(self,esine):
+        self.sijainti.esineet.remove(esine)
+        self.esineet.append(esine)
+        print(f"--> Keräsit esineen: {esine.nimi}")
 
 def koe():
-    print("--> Koe tulee ensi viikolla ")
+    print("--> Koe tulee ensi viikolla")
 
 def tunti():
     print("--> Nyt on Python-tunti")
@@ -15,84 +42,85 @@ def koulu():
     print("--> Sinun koulu on Metropolia")
 
 def pisteet():
-    pisteet = random.randint(0, 100)
-    print(f"--> Sinun pisteesi: {pisteet}/100")
+    print(f"--> Sinun pisteesi: {random.randint(0, 100)}/100")
 
 def arvonta():
-    luku = random.randint(1, 5)
-    print(f"--> Onnenlukusi on: {luku}")
-
-def lisaa_esine():
-    vastaus = input('haluatko lisätä esineen reppuun? (joo/ei): ').lower()
-
-    if vastaus == 'joo':
-        item = input('Mitä haluat laittaa reppuun: ')
-        reppu_lista.append(item)
-        print(f"--> {item} lisättiin reppuun!")
-    else: 
-        print('Okei, ensi kerralla')
-
-def nayta_reppu():
-    if len(reppu_lista) == 0:
-        print("--> Reppusi on tyhjä")
-    else: 
-        print("Reppusi sisältö: ")
-        for item in reppu_lista:
-            print(f"  - {item}")
-
-def lopeta():
-    print("--> Nähdään taas !")
+    print(f"--> Onnenlukusi on: {random.randint(1, 5)}")
 
 
+huoneet = [
+    Huone("Rautatientori", [Esine("Matkakortti", 0.1), Esine("Kartta", 0.2)]),
+    Huone("Kamppi", [Esine("Kahvikuppi", 0.4)]),
+    Huone("Helsingin yliopisto", [Esine("Kirja", 1.5), Esine("Kello", 0.3)]),
+]
 
-name = input('Anna nimesi: ')
-age = int(input('Anna ikäsi: '))
+nimi = input("Anna nimesi: ")
+age = int(input("Anna ikäsi: "))
 
-
-if age < 12: 
+if age < 12:
     print("Olet alaikäinen, peli sulkeutuu.")
     exit()
-else:
-    print(f"Tervetuloa, {name}!")
 
-w = ''
-while w != 'lopeta':
-    
+pelaaja = Pelaaja(nimi, age, huoneet[0])
+print(f"Tervetuloa, {pelaaja.nimi}!")
+
+
+
+
+w = ""
+while w != "lopeta":
     print("\n--------- Päävalikko ---------")
-    print("Komennot: ")
-    w = input('Anna komento: koe, tunti, ope, koulu, pisteet, arvonta, lisätä, reppu, lopeta: ')
-    print("\n--------- ---------  ---------")
+    print(f"Sijainti: {pelaaja.sijainti.nimi}")
+    print("Komennot: koe, tunti, ope, koulu, pisteet, arvonta, liiku, kerää, lopeta")
+    w = input("Anna komento: ")
+    print("--------- ---------  ---------")
 
-    if w == 'koe':
+    if w == "koe":
         koe()
-    
-    elif w == 'tunti':
+
+    elif w == "tunti":
         tunti()
 
-    elif w == 'ope':
+    elif w == "ope":
         ope()
 
-    elif w == 'koulu':
+    elif w == "koulu":
         koulu()
 
-    elif w == 'pisteet':
+    elif w == "pisteet":
         pisteet()
- 
-    elif w == 'arvonta':
+
+    elif w == "arvonta":
         arvonta()
 
-    elif w == 'lisätä':
-        lisaa_esine()
-    
-    elif w == 'reppu':
-        nayta_reppu()
-   
-    elif w == 'lopeta':
-        lopeta()
+    elif w == "liiku":
+        print("Minne haluat mennä?")
+        for i, huone in enumerate(huoneet):
+            print(f"  {i}. {huone.nimi}")
+        try:
+            numero = int(input("Anna numero: "))
+            pelaaja.liiku(huoneet[numero])
+        except (ValueError, IndexError):
+            print("--> Virheellinen valinta!")
 
-    else: print("Virhe!")
-    
-         
+    elif w == "kerää":
+        esineet = pelaaja.sijainti.esineet
+        if not esineet:
+            print("--> Täällä ei ole esineitä")
+        else:
+            print("Täällä on:")
+            for i, esine in enumerate(esineet):
+                print(f"  {i}. {esine}")
+            try:
+                numero = int(input("Minkä esineen keräät (numero): "))
+                pelaaja.keraa_esine(esineet[numero])
+            except (ValueError, IndexError):
+                print("--> Virheellinen valinta!")
 
-    
-print(f"Sun nimesi on {name}, ja ikäsi on {age}")
+    elif w == "lopeta":
+        print("--> Nähdään taas!")
+
+    else:
+        print("--> Virhe!")
+
+print(f"Sun nimesi on {pelaaja.nimi}, ja ikäsi on {pelaaja.age}")
