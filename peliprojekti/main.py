@@ -47,6 +47,14 @@ def pisteet():
 def arvonta():
     print(f"--> Onnenlukusi on: {random.randint(1, 5)}")
 
+def nayta_reppu(pelaaja):
+    if not pelaaja.esineet:
+        print("--> Reppusi on tyhjä")
+    else:
+        print("Reppusi sisältö:")
+        for esine in pelaaja.esineet:
+            print(f"  - {esine}")
+
 
 huoneet = [
     Huone("Rautatientori", [Esine("Matkakortti", 0.1), Esine("Kartta", 0.2)]),
@@ -71,7 +79,7 @@ w = ""
 while w != "lopeta":
     print("\n--------- Päävalikko ---------")
     print(f"Sijainti: {pelaaja.sijainti.nimi}")
-    print("Komennot: koe, tunti, ope, koulu, pisteet, arvonta, liiku, kerää, lopeta")
+    print("Komennot: koe, tunti, ope, koulu, pisteet, arvonta, reppu, liiku, kerää, lopeta")
     w = input("Anna komento: ")
     print("--------- ---------  ---------")
 
@@ -92,6 +100,9 @@ while w != "lopeta":
 
     elif w == "arvonta":
         arvonta()
+
+    elif w == "reppu":
+        nayta_reppu(pelaaja)
 
     elif w == "liiku":
         print("Minne haluat mennä?")
