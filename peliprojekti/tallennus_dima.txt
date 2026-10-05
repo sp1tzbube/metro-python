@@ -1,0 +1,7 @@
+nimi=dima
+ika=21
+sijainti=Helsingin yliopisto
+reppu=
+huone=Rautatientori|Matkakortti:0.1;Kartta:0.2
+huone=Kamppi|Kahvikuppi:0.4
+huone=Helsingin yliopisto|Kirja:1.5;Kello:0.3

@@ -1,0 +1,3 @@
+Olet Metropolian opiskelija, joka kiertää Helsingin keskustaa.
+Tutki kaupunkia, kerää esineitä reppuusi ja valmistaudu
+tulevaan Python-kokeeseen!

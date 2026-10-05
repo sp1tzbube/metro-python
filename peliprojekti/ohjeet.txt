@@ -1,0 +1,17 @@
+--------------- OHJEET ---------------
+koe       Kertoo koepäivän
+tunti     Kertoo, mikä tunti on menossa
+ope       Näyttää opettajasi
+koulu     Näyttää koulusi
+pisteet   Arpoo pisteesi (0-100)
+arvonta   Arpoo onnenlukusi (1-5)
+reppu     Näyttää repun sisällön
+liiku     Siirtää sinut toiseen paikkaan
+kerää     Kerää esineen nykyisestä paikasta
+ohjeet    Näyttää nämä ohjeet
+tallenna  Tallentaa pelin (tallennus_<nimi>.txt)
+lopeta    Tallentaa pelin ja sulkee sen
+
+Pelin voi jatkaa myöhemmin antamalla samalla nimellä
+pelin käynnistyessä ja vastaamalla k.
+--------------------------------------

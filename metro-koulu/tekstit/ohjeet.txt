@@ -1,0 +1,31 @@
+=== OHJEET ===
+
+Tavoite: löydä tutori ennen kuin vuorot loppuvat.
+
+Valinnat pelin aikana:
+  1 = Eteenpäin (kohti Kivenlahtea)
+  2 = Taaksepäin (kohti Vuosaarta)
+  3 = Etsi tältä asemalta (löytää tutorin, jos hän on tässä)
+  4 = Kysy järjestyksenvalvojalta (vain asemilla, joilla hän on)
+  5 = Soita tutorille (puhelimen akku riittää vain kahteen puheluun)
+  6 = Osta kahvi (vain kahvilaasemilla, antaa lisää vuoroja)
+  7 = Ohjeet (ei kuluta vuoroa)
+  0 = Lopeta peli
+
+Vuorot:
+  Matkustaminen, etsiminen, kysyminen, soittaminen ja kahvin osto
+  maksavat 1 vuoron. Kahvi antaa 3 vuoroa, joten se kannattaa.
+  Sama asema kannattaa etsiä vain kerran.
+
+Vihjeet etsiessä:
+  KUUMA  = tutori on hyvin lähellä (1-2 asemaa)
+  HAALEA = tutori on jossain lähellä (3-6 asemaa)
+  KYLMÄ  = tutori on kaukana (7+ asemaa)
+
+Kolme reittiä voittoon:
+  1. Yksin tutkijana: etsi vihjeiden avulla (eniten bonuspisteitä)
+  2. Vartijan avulla: kysy järjestyksenvalvojalta
+  3. Puhelun avulla: soita tutorille ja kuuntele
+  Voit myös yhdistää reitit!
+
+Vinkki: tutori on voinut nukahtaa ja ajaa päätepysäkille.
