@@ -1,8 +1,9 @@
-"""Pelin data: asemat, vihjeet, tapahtumat ja tekstit.
 
-Tässä tiedostossa ei ole logiikkaa, vain tietoa, jota muut tiedostot käyttävät.
-Näin pelin sisältöä (esim. vihjeitä) on helppo muuttaa koskematta koodiin.
-"""
+#Pelin data: asemat, vihjeet, tapahtumat ja tekstit.
+
+#Tässä tiedostossa ei ole logiikkaa, vain tietoa, jota muut tiedostot käyttävät.
+#Näin pelin sisältöä (esim. vihjeitä) on helppo muuttaa koskematta koodiin.
+
 
 # M1-linja idästä länteen. Indeksi 0 = Vuosaari, viimeinen = Kivenlahti.
 ASEMAT = [
@@ -13,15 +14,15 @@ ASEMAT = [
     "Tapiola", "Urheilupuisto", "Niittykumpu", "Matinkylä",
     "Finnoo", "Kaitaa", "Soukka", "Espoonlahti", "Kivenlahti",
 ]
-VIIMEINEN = len(ASEMAT) - 1  # viimeisen aseman indeksi (päätepysäkki)
+VIIMEINEN = len(ASEMAT) - 1       # viimeisen aseman indeksi (päätepysäkki)
 
 # ---------- Pelin asetukset ----------
-ALOITUSVUOROT = 24            # vuoroja tavalliselle pelaajalle
-ALOITUSVUOROT_LAPSI = 30      # alle 13-vuotiaalle hieman enemmän
+ALOITUSVUOROT = 24                # vuoroja tavalliselle pelaajalle
+ALOITUSVUOROT_LAPSI = 30          # alle 13-vuotiaalle hieman enemmän
 TAPAHTUMAN_TODENNAKOISYYS = 0.2   # satunnaisen tapahtuman todennäköisyys matkalla
 TIEDON_TODENNAKOISYYS = 0.3       # "Tiesitkö?"-tiedon todennäköisyys matkalla
-KAHVIN_VUOROT = 3             # kahvi antaa näin monta vuoroa (maksaa itse 1)
-PUHELUT = 2                   # puhelimen akku riittää näin moneen puheluun
+KAHVIN_VUOROT = 3                 # kahvi antaa näin monta vuoroa (maksaa itse 1)
+PUHELUT = 2                       # puhelimen akku riittää näin moneen puheluun
 
 # Asemat, joilla on kahvila / järjestyksenvalvoja (pelin keksittyä sisältöä)
 KAHVILA_ASEMAT = {"Itäkeskus", "Kamppi", "Tapiola", "Espoonlahti"}

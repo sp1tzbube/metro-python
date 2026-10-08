@@ -1,0 +1,3 @@
+dima;31;yksin;120;7
+bob;11;yksin;180;13
+kuk;89;yksin;80;3

@@ -1,4 +1,4 @@
-=== ETSI VÄSYNYT TUTORI ===
+============ ============ ETSI VÄSYNYT TUTORI ============ ============
 
 On perjantai-ilta. Tutorisi on opiskellut koko päivän ja on aivan uupunut.
 Hän nousi M1-metroon ja nukahti penkille. Nyt hän ei vastaa puhelimeen.
@@ -10,3 +10,5 @@ Linja kulkee Vuosaaresta Kivenlahteen, 27 asemaa.
 Voit etsiä itse, kysyä järjestyksenvalvojilta tai soittaa tutorille.
 
 Onnea matkaan!
+
+============ ============ ============ ============ ============ 

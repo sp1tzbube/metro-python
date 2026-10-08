@@ -1,10 +1,10 @@
-"""Pelaaja-luokka: pitää kirjaa pelaajan tilasta pelin aikana."""
+#Pelaaja-luokka: pitää kirjaa pelaajan tilasta pelin aikana
 
-from .asemat import VIIMEINEN, PUHELUT
+from asemat import VIIMEINEN, PUHELUT
 
 
 class Pelaaja:
-    """Yksi pelaaja ja kaikki, mikä muuttuu pelin aikana."""
+    #Yksi pelaaja ja kaikki, mikä muuttuu pelin aikana
 
     def __init__(self, nimi, ika, paikka, vuorot):
         self.nimi = nimi
@@ -18,10 +18,11 @@ class Pelaaja:
         self.puheluja_jaljella = PUHELUT
 
     def liiku(self, suunta):
-        """Siirtää pelaajaa (+1 eteenpäin, -1 taaksepäin).
 
-        Palauttaa True, jos siirto onnistui, ja False, jos ollaan päätepysäkillä.
-        """
+        #Siirtää pelaajaa (+1 eteenpäin, -1 taaksepäin).
+
+        #Palauttaa True, jos siirto onnistui, ja False, jos ollaan päätepysäkillä.
+
         uusi_paikka = self.paikka + suunta
         if uusi_paikka < 0 or uusi_paikka > VIIMEINEN:
             return False
@@ -30,11 +31,13 @@ class Pelaaja:
         return True
 
     def kayta_vuoro(self, maara=1):
-        """Kuluttaa vuoroja (oletuksena yhden)."""
+
+        #Kuluttaa vuoroja (oletuksena yhden)
         self.vuorot -= maara
 
     def muuta_vuoroja(self, muutos):
-        """Lisää tai vähentää vuoroja (tapahtumat, kahvi). Ei mene alle nollan."""
+        
+        #Lisää tai vähentää vuoroja (tapahtumat, kahvi). Ei mene alle nollan
         self.vuorot = max(0, self.vuorot + muutos)
 
     def __str__(self):

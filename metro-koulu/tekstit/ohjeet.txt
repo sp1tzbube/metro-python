@@ -1,4 +1,4 @@
-=== OHJEET ===
+============ ============ OHJEET ============ ============
 
 Tavoite: löydä tutori ennen kuin vuorot loppuvat.
 
