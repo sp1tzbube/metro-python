@@ -1,0 +1,156 @@
+
+/* ---------- Colours ---------- */
+:root {
+  --cream: #f4efe7;
+  --sand: #e6ddd0;
+  --forest: #2f4a45;
+  --sage: #c9d6cf;
+  --clay: #8e3f27;
+  --ink: #23201c;
+}
+
+/* ---------- Base ---------- */
+body {
+  margin: 0;
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  font-family: "Lora", Georgia, serif;
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--clay);
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--sand);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 24px;
+  background-color: var(--forest);
+  color: var(--cream);
+  font-family: "Lora", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.main-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav a {
+  display: block;
+  padding: 20px 32px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  background-color: var(--cream);
+  font-weight: bold;
+}
+
+/* ---------- Home ---------- */
+.hero {
+  padding: 40px;
+  text-align: center;
+  background-color: var(--sage);
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 24px auto 0;
+}
+
+/* ---------- Products ---------- */
+.products {
+  padding: 0 40px 40px;
+}
+
+.products-banner {
+  width: calc(100% + 80px);
+  margin: 0 -40px;
+}
+
+.product-list {
+  display: flex;
+  gap: 20px;
+}
+
+.product {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+}
+
+.product figure {
+  margin: 0;
+}
+
+.product figcaption {
+  font-style: italic;
+}
+
+/* ---------- Contact ---------- */
+.contact {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  background-color: var(--sage);
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact .map {
+  flex: 2;
+  margin: 0;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding: 10px 40px;
+  text-align: center;
+}
+
+/* Hidden heading for screen readers (Products page) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
